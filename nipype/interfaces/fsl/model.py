@@ -1702,6 +1702,8 @@ class ClusterInputSpec(FSLCommandInputSpec):
     minclustersize = traits.Bool(
         False, usedefault=True, argstr='--minclustersize',
         desc='prints out minimum significant cluster size')
+    minextent = traits.Int(argstr='--minextent=%d',
+                             desc='threshold for input volume')
     xfm_file = File(argstr='--xfm=%s',
                     desc=('filename for Linear: input->standard-space '
                           'transform. Non-linear: input->highres transform'))
